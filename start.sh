@@ -1,25 +1,21 @@
 #!/bin/bash
  
-# 隧道相关设置（去掉下面变量前面#启用，否则使用临时隧道）
 # export TOK=${TOK:-'xccxx'}  # token或json,可以直接复制全部，建议使用json，可以免设置端口
-# export ARGO_DOMAIN=${ARGO_DOMAIN:-'xxx'} # 隧道域名
+# export ARGO_DOMAIN=${ARGO_DOMAIN:-'webhost.vivokf.cloudns.be'}
 
-# 哪吒相关设置
 export NEZHA_SERVER=${NEZHA_SERVER:-''}
 export NEZHA_KEY=${NEZHA_KEY:-''}
-export NEZHA_PORT=${NEZHA_PORT:-'443'}
-export NEZHA_TLS=${NEZHA_TLS:-'1'}  # 1启用tls,0关闭tls
+export NEZHA_PORT=${NEZHA_PORT:-''}
+export NEZHA_TLS=${NEZHA_TLS:-''}
 
-# 节点相关设置(节点可在worlds文件里list.log查看)
-export TMP_ARGO=${TMP_ARGO:-'vms'}  # 节点类型,可选vls,vms,rel,hy2,tuic，sock,3x
-#export UUID="9e0da28d-ee9c-4fef-95a4-df2d0335e649"  # 默认随机，去掉#可设置固定UUID
-export VL_PORT=${VL_PORT:-'8002'} #vles 端口 (token隧道设置，json不用设置，会自动识别)
-export VM_PORT=${VM_PORT:-'8001'} #vmes 端口 (token隧道设置，json不用设置，会自动识别)
-export CF_IP=${CF_IP:-'ip.sb'}  # cf优选域名或ip
-export SUB_NAME=${SUB_NAME:-'Argo'} # 节点名称
+export TMP_ARGO=${TMP_ARGO:-'vms'}
+export UUID="1b54d55e-4355-4563-aaf5-757bb845d923"
+export VL_PORT=${VL_PORT:-'8002'}
+export VM_PORT=${VM_PORT:-'8001'}
+export CF_IP=${CF_IP:-'ip.sb'}
+export SUB_NAME=${SUB_NAME:-'webhost'}
 # export second_port=""  #设置第二个端口，个别玩具可以开启第二个端口
 
-# reality协议下开启socks5转发(去掉#开启),即reality协议连接中转机然后转发到socks5落地鸡
 # export S_IP="116.11.19" #要转发的socks5地址
 # export S_PORT="1077"  #要转发的socks5端口
 # export S_USER="5a99dfcfa6"
